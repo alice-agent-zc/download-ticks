@@ -11,8 +11,8 @@ It is resumable and idempotent. It never interpolates a gap, never silently
 drops a failed chunk, and writes a manifest that identifies the dataset.
 
 > **Status 2026-11-10.** The current code fetches klines only, through REST.
-> It fails to build on a host without OpenSSL (`reqwest` native-tls), has no
-> checksum/resume/verify path, and ignores failed chunks. This README defines
+> The TLS build now uses `rustls` and no longer needs OpenSSL. It has no
+> checksum/resume/verify path and ignores failed chunks. This README defines
 > the target. The rewrite lands in this repository's PR, one step at a time.
 
 ## Why it exists
